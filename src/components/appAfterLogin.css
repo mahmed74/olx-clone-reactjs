@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar-brand {
+    margin: 0 2rem !important;
+}
+
+.SelectorDiv {
+    width: 18rem;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.SelectorDiv select {
+    border: none !important;
+    outline: none !important;
+    cursor: text;
+    outline-width: none;
+    outline-style: none;
+}
+
+.SelectorDiv select:focus {
+    border: none !important;
+    outline: none !important;
+}
+
+.SelectorDiv select {
+    width: 12rem;
+    height: 3rem;
+}
+
+.SelectorDiv select option {
+    height: 4rem;
+}
+
+.custom-select select {
+    border: none;
+}
+
+select {
+    border: none !important;
+    outline: none !important;
+}
+
+select:focus {
+    outline: none !important;
+}
+
+.SelectorDiv {
+    padding: 0 0.5rem;
+}
+
+.SelectorDiv select {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    /* Remove default arrow */
+}
+
+
+/* customizing search field */
+
+.SearchbarDiv {
+    width: 32rem;
+    margin: 0 2rem;
+}
+
+.SearchbarDiv input {
+    width: 34rem;
+    height: 3rem;
+    outline: 2px solid black !important;
+}
+
+.SearchbarDiv input:focus {
+    outline: 2px solid skyblue !important;
+    border: none;
+}
+
+.Searchbtn {
+    width: 3.2rem;
+    height: 3.2rem !important;
+    background-color: #002f34;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+}
+
+.Searchbtn .MuiSvgIcon-root {
+    color: white;
+}
+
+
+/* Customizing nav btns */
+
+.btnmainDiv {
+    display: flex;
+    margin: 0 3rem;
+}
+
+.btnmainDiv {
+    align-items: center;
+}
+
+.SellBtn img,
+.loginBtn {
+    margin: 0 1rem;
+    cursor: pointer;
+}

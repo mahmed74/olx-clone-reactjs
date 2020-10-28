@@ -1,38 +1,482 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar-brand {
+    margin: 0 2rem !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.SelectorDiv {
+    width: 18rem;
+    background-color: white;
+    border: 2px solid black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.SelectorDiv select {
+    border: none !important;
+    outline: none !important;
+    cursor: text;
+    outline-width: none;
+    outline-style: none;
 }
 
-.App-link {
-  color: #61dafb;
+.SelectorDiv select:focus {
+    border: none !important;
+    outline: none !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.SelectorDiv select {
+    width: 12rem;
+    height: 3rem;
+}
+
+.SelectorDiv select option {
+    height: 4rem;
+}
+
+.custom-select select {
+    border: none;
+}
+
+select {
+    border: none !important;
+    outline: none !important;
+}
+
+select:focus {
+    outline: none !important;
+}
+
+.SelectorDiv {
+    padding: 0 0.5rem;
+}
+
+.SelectorDiv select {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    /* Remove default arrow */
+}
+
+
+/* customizing search field */
+
+.SearchbarDiv {
+    width: 32rem;
+    margin: 0 2rem;
+}
+
+.SearchbarDiv input {
+    width: 34rem;
+    height: 3rem;
+    outline: 2px solid black !important;
+}
+
+.SearchbarDiv input:focus {
+    outline: 2px solid skyblue !important;
+    border: none;
+}
+
+.Searchbtn {
+    width: 3.2rem;
+    height: 3.2rem !important;
+    background-color: #002f34;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+}
+
+.Searchbtn .MuiSvgIcon-root {
+    color: white;
+}
+
+
+/* Customizing nav btns */
+
+.btnmainDiv {
+    display: flex;
+    margin: 0 3rem;
+}
+
+.btnmainDiv .loginBtn a {
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid black;
+    padding-bottom: 0.2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.btnmainDiv .loginBtn a:hover {
+    border: none;
+    transition: 0.4s;
+}
+
+.btnmainDiv {
+    align-items: center;
+}
+
+.SellBtn img,
+.loginBtn {
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+
+/* Customizing All categories part */
+
+.bottom-nav {
+    display: flex;
+    justify-content: center;
+    align-items: space-around;
+    position: relative;
+    top: 65%;
+    z-index: - 1;
+    border-bottom: 1px solid lightgray;
+}
+
+#dropdown-basic {
+    background: none;
+    color: black;
+    border: none;
+    font-size: 0.90rem;
+}
+
+#dropdown-basic:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.dropdown {
+    width: 90%;
+    z-index: 0;
+}
+
+.dropdown-menu {
+    display: flex !important;
+    justify-content: space-around !important;
+    flex-wrap: wrap !important;
+    /* align-items: center !important; */
+    width: 100%;
+}
+
+.dropdown-menu .dropdown-item-cont {
+    width: 30%;
+}
+
+.dropdown-menu .dropdown-item-cont ul {
+    list-style-type: none;
+}
+
+.dropdown-menu .dropdown-item-cont ul li {
+    font-size: 0.75rem;
+    margin-right: 1%;
+    color: #002f34;
+}
+
+.dropdown-item {
+    font-size: 0.8rem;
+    font-weight: bold !important;
+}
+
+.popular-categories {
+    width: 40%;
+    position: absolute;
+    margin-top: 0.35%;
+}
+
+.popular-categories ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    /* width: 100%; */
+    font-size: 0.8em;
+    color: #002f34;
+}
+
+.popular-categories ul li {
+    color: #002f34;
+}
+
+
+/*           Jumbo img css              */
+
+.banner1 {
+    background-image: url('https://statics.olx.com.pk/external/base/img/hero_bg_pk.jpg');
+    height: 252px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    /* position: fixed; */
+    left: 0;
+    right: 0;
+    z-index: 1;
+    margin-bottom: 0%;
+    width: 100%;
+}
+
+.banner2 {
+    background-image: url('https://tpc.googlesyndication.com/simgad/1123053959195589078');
+    margin-top: 20px;
+    background-size: cover;
+    background-attachment: static;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hidden {
+    color: transparent !important;
+}
+
+.btnHide {
+    color: transparent !important;
+    display: none !;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+
+/*        Carousel part css         */
+
+.CaruselText {
+    background-color: #EEEEEE;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.2rem 1rem;
+    background: transparent;
+}
+
+.cardHeader .MuiSvgIcon-root:active {
+    color: red;
+}
+
+.cardHeader .MuiSvgIcon-root:hover {
+    cursor: pointer;
+}
+
+.CaruselText h1 {
+    font-size: 1.4rem;
+    padding: 1rem 2rem;
+    margin-left: 4.7rem;
+}
+
+.todayPara {
+    font-size: 0.6rem;
+    text-align: right;
+}
+
+.FreshRecommendDiv {
+    margin: 2rem;
+}
+
+.FreshrecHeading {
+    font-size: 1.4rem;
+}
+
+.card {
+    height: 21rem !important;
+    margin: 1rem;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.card img {
+    height: 10rem !important;
+}
+
+
+/*   Load More button css  */
+
+.buttonLoad>button {
+    color: #002f34;
+    font-weight: 500;
+    border-radius: 4px;
+    border: 2px solid #002f34;
+    padding: 0 10px;
+    font-size: 16px;
+    height: 48px;
+    background-color: #ffff !important;
+}
+
+.buttonLoad>button:hover {
+    border: 5px solid #002f34;
+}
+
+.buttonLoad {
+    align-items: center !important;
+    display: flex;
+    justify-content: center;
+}
+
+.noMore {
+    align-items: center !important;
+    display: flex;
+    justify-content: center;
+}
+
+
+/*   customizing footer   */
+
+.FooterDiv h5 {
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.FooterDiv a {
+    text-decoration: none;
+    color: #002f34;
+    font-size: 0.7rem;
+}
+
+.FooterDiv a:hover {
+    text-decoration: none;
+    font-size: 0.7rem;
+    color: black;
+}
+
+.FooterDiv ul li {
+    list-style-type: none;
+}
+
+.footerCol {
+    margin: 0 1rem !important;
+}
+
+.alertFooter {
+    background-color: #ebeeef !important;
+    border-top: 1px solid#002f34 !important;
+    padding: 2rem 0;
+}
+
+
+/*   jumbo ad css  */
+
+.fluidContDiv {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.socialDiv h4 {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.SocialImgDiv {
+    display: flex;
+}
+
+.tryText {
+    margin: 1rem;
+    padding: 1rem;
+    border-right: 2px solid #002f34;
+}
+
+.tryText h3 {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.tryText h1 {
+    font-size: 34px;
+    line-height: 40px;
+    font-weight: 700;
+    color: #002f34;
+}
+
+.lastADDiv {
+    background: rgba(0, 47, 52, .03);
+}
+
+.SocialImgDiv img {
+    cursor: pointer;
+    margin: 0 0.4rem;
+}
+
+.SocialIcons svg {
+    padding: 2rem;
+    color: #002f34;
+}
+
+.ShowAlertDiv {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.loadMoreVanish {
+    display: none;
+}
+
+
+/*   footerTwo css  */
+
+.mainDivFooterTwo {
+    /* height: 10vh; */
+    background-color: #002f34;
+    padding: 18px 0;
+    line-height: 18px;
+    font-size: 12px;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.otherContriesText {
+    padding: 0 3rem;
+}
+
+.CopyrigtText {
+    padding: 0 3rem;
+}
+
+.SocialImgDivFooter {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.SocialImgDivFooter img {
+    margin: 0.3rem;
+}
+
+
+/*    Using Media for resopnsiveness  */
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .navbarSearchmainDiv {
+        /* display: block; */
+        height: fit-content;
+    }
+    .BtnsDiv {
+        display: block;
+    }
+    .SearchbarDiv {
+        display: block;
+    }
+    .navbarSearchmainDiv {
+        display: flex;
+        justify-content: center;
+    }
+    .popular-categories {
+        display: none;
+    }
+    .carousel-item .row {
+        margin: 0 auto;
+    }
+    .lastADDiv .fluidContDiv {
+        display: flex !important;
+        flex-direction: column !important;
+    }
 }
