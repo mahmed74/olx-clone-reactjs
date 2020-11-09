@@ -40,6 +40,10 @@
     border: none;
 }
 
+.SelectorDiv .custom-select option {
+    border: none;
+}
+
 select {
     border: none !important;
     outline: none !important;
@@ -47,6 +51,7 @@ select {
 
 select:focus {
     outline: none !important;
+    box-shadow: none !important;
 }
 
 .SelectorDiv {
@@ -102,15 +107,32 @@ select:focus {
 .btnmainDiv .loginBtn a {
     text-decoration: none;
     color: black;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid black !important;
     padding-bottom: 0.2rem;
     font-size: 1.1rem;
     font-weight: 500;
 }
 
-.btnmainDiv .loginBtn a:hover {
-    border: none;
+.btnmainDiv .loginBtn a:hover,
+.loginBtn a:active {
+    border: none !important;
     transition: 0.4s;
+    outline: none !important;
+}
+
+.btnmainDiv .loginBtn a:active {
+    border: none !important;
+    outline: none !important;
+}
+
+.loginBtn:focus {
+    border: none !important;
+    outline: none !important;
+}
+
+.btnmainDiv:active {
+    border: none !important;
+    outline: none !important;
 }
 
 .btnmainDiv {
@@ -449,6 +471,9 @@ select:focus {
 .SocialImgDivFooter img {
     margin: 0.3rem;
 }
+
+
+/*  Designing mui autocomplete css   */
 
 
 /*    Using Media for resopnsiveness  */

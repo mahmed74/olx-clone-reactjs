@@ -13,110 +13,37 @@ import firebase from 'firebase'
 
 
 
-export default class FreshRecommendations extends React.Component {
+export default class RecAfterLogin extends React.Component {
 
 
-
-
-
-
-
-
-
-
-
-
-
-    Extra_row = () =>{
-
-        alert("No cards for now")
-           
+constructor(){
+    super()
+    this.state = {
+        myarr : [],
     }
+}
 
 
-    // componentDidMount(){
-    // //     firebase.database().ref('newCard').on('child_added',(data)=>{
-    // //         console.log(data.val())
-    // //         newCardData.push(data.val())
-    // //         console.log("newCArd array ==>",newCardData)
-    //         this.setState({
-    //             valueDemo:"valueDemo",
-    //         })
-
-    // //         console.log("this is inserted value of data rn ==>" , data.val())
-    // //     })
-    // }
 
 
-    // componentDidMount(){
+    componentDidMount(){
         
-    // firebase.database().ref('newCard').on('value',(data)=>{
-    //     console.log(data.val())
-    //     const mydata = data.val()
-        
-    // if(newCardData[newCardData.length-1].itemTitle == data.val().itemTitle){
-    //     alert("Card already exists")
-    // }else {
-    // //     newCardData.push(data.val())
-    // //     console.log("newCArd array ==>",newCardData)
-    // //     console.log(data.val().itemTitle)
-    // //     console.log(newCardData[newCardData.length-1])
-    //     for (let ID in mydata){
-    //         newCardData.push(mydata[ID])
-    //     }
-    //     console.log(mydata)
-    //     console.log(newCardData)
-
-    // this.setState({
-    //     valueDemo:"valueDemo",})
-
-    //     firebase.database().ref('newCard').on('value',(data)=>{
-    //         console.log(data.val())
-    //         const mydata = data.val()
-    //         const mynewArr = []
-       
-    //     for (let ID in mydata){
-    //         newCardData.push(mydata[ID])
-    //     }
-    //     console.log(mynewArr)
-    //     console.log(mydata)
-    //     console.log(newCardData)
-    //     this.setState({
-    //         valueDemo:"valueDemo",
-    //     })
-    // })
-
-    // }
-
-
-    constructor(){
-        super()
-        this.state = {
-            myarr : [],
+        firebase.database().ref('newCard').on('value',(data)=>{
+            console.log(data.val())
+            const mydata = data.val()
+        for (let ID in mydata){
+            this.state.myarr.push(mydata[ID])
         }
-    }
-    
-    
-    
-    
-        componentDidMount(){
-            
-            firebase.database().ref('newCard').on('value',(data)=>{
-                console.log(data.val())
-                const mydata = data.val()
-            for (let ID in mydata){
-                this.state.myarr.push(mydata[ID])
-            }
-            console.log(this.state.myarr)
-            console.log(mydata)
-            console.log(newCardData)
-            this.setState({
-                myarr:this.state.myarr,
-            })
+        console.log(this.state.myarr)
+        console.log(mydata)
+        console.log(newCardData)
+        this.setState({
+            myarr:this.state.myarr,
         })
-        
+    })
     
-        }
+
+    }
 
 
 
@@ -127,7 +54,6 @@ export default class FreshRecommendations extends React.Component {
     render() {
 
 
-        
     
 
 
@@ -171,7 +97,7 @@ export default class FreshRecommendations extends React.Component {
                 <div className="container ">
 
                     <div className="buttonLoad ml-5 my-3">
-                        <button onClick={this.Extra_row} className="loadMore"  >Load More</button>
+                        <button  className="loadMore"  >Load More</button>
                     </div> </div>
 
                 <div className="ShowAlertDiv">

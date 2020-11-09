@@ -7,11 +7,13 @@ import 'bootstrap/dist/js/bootstrap.js';
 import $ from 'jquery';
 import Popper from 'popper.js';
 import { Provider, provider } from 'react-redux';
-import store from './store';
+import store from './App/store';
+import Link from 'react-router-dom';
 
 // Extra additions from here
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter } from 'react-router-dom';
 // import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js ';
 
 
@@ -20,10 +22,15 @@ ReactDOM.render( <
     <
     Provider store = { store } >
     <
+    BrowserRouter >
+    <
     App / >
     <
-    /Provider> <
-    /React.StrictMode>,document.getElementById('root')
+    /BrowserRouter> </
+    Provider >
+    <
+    /React.StrictMode>,
+    document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change

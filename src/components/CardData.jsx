@@ -147,18 +147,18 @@ const CardData = [
         place:'karachi',
         imgsrc:'https://apollo-singapore.akamaized.net/v1/files/g4aamdavxfdw1-PK/image;s=300x600;q=60'
     },
-    {
-        price:'Rs 12,000',
-        title:'Core i5 Gaming pc',
-        place:'karachi',
-        imgsrc:'https://apollo-singapore.akamaized.net/v1/files/cpi2bnpc1zsu3-PK/image;s=300x600;q=60'
-    },
-    {
-        price:'Rs 7,000',
-        title:'Cowboy Guitar',
-        place:'karachi',
-        imgsrc:'https://apollo-singapore.akamaized.net/v1/files/3aa50yhr8ams2-PK/image;s=300x600;q=60'
-    }
+    // {
+    //     price:'Rs 12,000',
+    //     title:'Core i5 Gaming pc',
+    //     place:'karachi',
+    //     imgsrc:'https://apollo-singapore.akamaized.net/v1/files/cpi2bnpc1zsu3-PK/image;s=300x600;q=60'
+    // },
+    // {
+    //     price:'Rs 7,000',
+    //     title:'Cowboy Guitar',
+    //     place:'karachi',
+    //     imgsrc:'https://apollo-singapore.akamaized.net/v1/files/3aa50yhr8ams2-PK/image;s=300x600;q=60'
+    // }
     
 
 ]
